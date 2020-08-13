@@ -1,5 +1,5 @@
 function x_hat = CG2(z, fxnW, m, iter_numb, init)
-
+% @ Skuratovs, Nikolajs
 if init == 0
     x_hat = zeros(m,1);
     r = z;
