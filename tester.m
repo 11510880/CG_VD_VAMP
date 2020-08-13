@@ -45,7 +45,6 @@ for i=1:3
     opts.saveHist = 1;
     opts.denoiserDiv = 0; % VDAMP-alpha
     scales = 4;
-    [fxnA,fxnAt] = generateOperators(mask,scales,prob_map);
     % cor ij , i = 1,2 j =1,2,3
     %% Run VDAMP 
     t3 = tic;
