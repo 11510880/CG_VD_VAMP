@@ -310,7 +310,7 @@ function [x_hat, hist,cor1,cor2] = VDAMP_O(y, mask, prob_map, sigma_w, x0, opts)
     cor1 =abs(cor1);
     cor2 =abs(cor2);
     for iter = 1:numel(hist.timer)
-        xk_tilde = multiscaleRecon(pyramidInv(hist.C_thr(:,:,iter), opts.scales));
+        xk_tilde = multiscaleRecon(pyramidInv(hist.c_1k_hat(:,:,iter), opts.scales));
         z2 = mask.*(y - fftnc(xk_tilde));
         xk = ifftnc(fftnc(xk_tilde) + z2); % last line in the vdamp
         if saveHist
